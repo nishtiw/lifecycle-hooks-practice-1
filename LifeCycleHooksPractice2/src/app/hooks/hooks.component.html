@@ -1,0 +1,29 @@
+<div class="bgColor px-2">
+    <p>hooks works!</p>
+    <div>
+        <div>
+            <input type="text" (blur)="handleData($event)">
+        </div>
+        <div>
+            <div>
+                <h3>Product Info Form</h3>
+            </div>
+            <div>
+                <p>Product Name : <input type="text" [(ngModel)]="productName"> </p>
+            </div>
+            <div>
+                <p>Product Price : <input type="text" [(ngModel)]="productPrice"> </p>
+            </div>
+            <div>
+                <button (click)="updateProduct()">Update Product</button>
+            </div>
+        </div>
+        <div>
+            <div >
+                <app-hooks-child [dataFromParent]="data" [product]="product" class="px-2">
+                    <h4 #child>This is the content from parent component being displayed in child component.</h4>
+                </app-hooks-child>
+            </div>
+        </div>
+    </div>
+</div>
